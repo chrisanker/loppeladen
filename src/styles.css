@@ -19,11 +19,14 @@ body {
 
 nav {
     height: 4rem;
-    font-size: 1.2rem;
 }
 
 a {
     text-decoration-line: none;
+}
+
+h1 {
+    font-size: 2em;
 }
 
 p {
@@ -44,6 +47,10 @@ section img {
     max-width: 33%;
     max-height: auto;
     border-radius: 10px;
+}
+
+p, ul, nav {
+    font-size: 1.2em;
 }
 
 .img-container {
