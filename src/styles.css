@@ -47,6 +47,7 @@ section img {
     max-width: 33%;
     max-height: auto;
     border-radius: 10px;
+    animation: 1s ease-out 0s 1 slideInLeft;
 }
 
 p, ul, nav {
@@ -81,4 +82,13 @@ p, ul, nav {
 
 .nav-links:hover {
     background-color: rgba(47, 79, 79, 0.2);
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0)
+    }
 }
