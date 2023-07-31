@@ -73,3 +73,12 @@ p, ul, nav {
 .margin-right {
     width: 4rem;
 }
+
+.nav-links {
+    padding: 0.2em;
+    border-radius: 5px;
+}
+
+.nav-links:hover {
+    background-color: rgba(47, 79, 79, 0.2);
+}
