@@ -3,7 +3,7 @@
     margin: 0;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    
+
 }
 
 html {
@@ -50,7 +50,9 @@ section img {
     animation: 1s ease-out 0s 1 slideInLeft;
 }
 
-p, ul, nav {
+p,
+ul,
+nav {
     font-size: 1.2em;
 }
 
@@ -88,7 +90,30 @@ p, ul, nav {
     0% {
         transform: translateX(-300%);
     }
+
     100% {
         transform: translateX(0)
     }
 }
+
+.menu-container {
+    background-color: rgb(47, 79, 79);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-container:hover {
+    background-color: goldenrod
+}
+
+.menu-bar {
+    height: 4px;
+    width: 25px;
+    margin: 2px 0;
+    background-color: #e6e6e6;
+}
+
