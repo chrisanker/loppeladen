@@ -20,8 +20,9 @@ nav {
     height: 4rem;
 }
 
-a {
+a, a:visited {
     text-decoration-line: none;
+    color: darkslategray;
 }
 
 h1 {
@@ -163,4 +164,15 @@ a {
     grid-template-columns: repeat(2, 50% [col-start]);
     height: fit-content;
     width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    #nav-links-container {
+        display: none;
+    }
+
+    #nav-col-0 {
+        justify-self: right;
+        margin: 0 1em 0 0;
+    }
 }
