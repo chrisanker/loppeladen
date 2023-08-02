@@ -8,9 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <script src="script.js"></script>
 </head>
 
 <body>
+    <div id="overlay-menu" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#opening-hours">Åbningstider</a>
+            <a href="#contact">Kontaktoplysninger</a>
+        </div>
+      </div>
     <div style="height: 2rem;"></div>
     <nav class="flex-display">
         <div class="margin"></div>
@@ -23,7 +31,7 @@
                 <a class="nav-links" href="#contact">Kontaktoplysninger</a>
             </b>
         </div>
-        <div class="menu-container flex-display">
+        <div class="menu-container flex-display" onclick="openNav()">
             <div class="menu-bar"></div>
             <div class="menu-bar"></div>
             <div class="menu-bar"></div>
