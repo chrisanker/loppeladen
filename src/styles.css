@@ -35,7 +35,7 @@ p {
 }
 
 section {
-    padding-top: 3rem;
+    margin-top: 3rem;
 }
 
 footer {
@@ -174,5 +174,13 @@ a {
 
     h1 {
         font-size: 1.5em;
+    }
+    .img-container {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    section img {
+        width: 100%;
+        border-radius: 0;
     }
 }
