@@ -18,6 +18,7 @@ body {
 
 nav {
     height: 4rem;
+    margin-top: 2em;
 }
 
 a, a:visited {
@@ -34,7 +35,7 @@ p {
 }
 
 section {
-    padding-top: 3rem;
+    margin-top: 3rem;
 }
 
 footer {
@@ -44,8 +45,7 @@ footer {
 }
 
 section img {
-    max-width: 33%;
-    max-height: auto;
+    width: 30%;
     border-radius: 10px;
     animation: 1s ease-out 0s 1 slideInLeft;
 }
@@ -62,10 +62,6 @@ a {
     flex-wrap: wrap;
     width: auto;
     justify-content: space-around;
-}
-
-.bg-light {
-    background-color: #e6e6e6;
 }
 
 .flex-display {
@@ -174,5 +170,17 @@ a {
     #nav-col-0 {
         justify-self: right;
         margin: 0 1em 0 0;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+    .img-container {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    section img {
+        width: 100%;
+        border-radius: 0;
     }
 }
