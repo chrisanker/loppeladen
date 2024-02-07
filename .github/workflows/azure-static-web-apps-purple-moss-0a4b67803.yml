@@ -18,6 +18,12 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: npm ci && npm test
+      
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -30,7 +36,6 @@ jobs:
           app_location: "/src/" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "" # Built app content directory - optional
-          app_build_command: "npm test"
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
