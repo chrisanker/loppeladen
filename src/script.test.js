@@ -7,5 +7,5 @@ it('returns formated month', () => {
 
 it('returns formated month', () => {
     const result = getMonthName(0);
-    expect(result).toBe('februar');
+    expect(result).toBe('januar');
 });
