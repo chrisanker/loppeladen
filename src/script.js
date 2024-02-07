@@ -22,6 +22,27 @@ const openingTimes = [
     },
     {
         date: new Date("06 December 2023")
+    },
+    {
+        date: new Date("06 March 2024")
+    },
+    {
+        date: new Date("22 April 2024")
+    },
+    {
+        date: new Date("04 June 2024")
+    },
+    {
+        date: new Date("03 July 2024")
+    },
+    {
+        date: new Date("12 August 2024")
+    },
+    {
+        date: new Date("01 October 2024")
+    },
+    {
+        date: new Date("04 December 2024")
     }
 ];
 
