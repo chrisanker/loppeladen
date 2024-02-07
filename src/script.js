@@ -85,7 +85,7 @@ function getDayOfWeek(date) {
     return days[date];
 }
 
-function getMonthName(monthIndex) {
+export function getMonthName(monthIndex) {
     
     const months = [
         "januar",
