@@ -12,56 +12,57 @@
 </head>
 
 <body>
-    <div id="overlay-menu" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <menu class="overlay-content">
-            <li><a href="#opening-hours" onclick="closeNav()">Åbningstider</a></li>
-            <li><a href="#contact" onclick="closeNav()">Kontaktoplysninger</a></li>
-        </menu>
-    </div>
-    <nav id="logo" class="flex-display">
-        <div class="grid-container">
-            <div>
-                <img  src="assets/loppeladen_cropped.jpg" alt="Loppeladen logo" style="max-width: 100%; height: auto; padding: 1em; min-width: 300px;">
-            </div>
-            <div id="nav-col-0" class="flex-display">
-                <b id="nav-links-container">
-                    <a class="nav-links" href="#opening-hours">Åbningstider</a>
-                    <a class="nav-links" href="#contact">Kontaktoplysninger</a>
-                </b>
-                <div class="menu-container flex-display" onclick="openNav()">
-                    <div class="menu-bar"></div>
-                    <div class="menu-bar"></div>
-                    <div class="menu-bar"></div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div>
-        <section class="img-container">
-            <img src="assets/boger.jpg" alt="">
-            <img src="assets/porcelæn.jpg" alt="">
-            <img src="assets/spil.jpg" alt="">
-        </section>
-        <section>
-            <h1 id="opening-hours">Åbningstider</h1>
-            <p class="text-size-normal">Loppeladen holder åbent på nedenstående datoer i tidsrummet 18:00-20:00</p>
-            <ul id="opening-dates-list">
-            </ul>
-            <p>Indgang kr. 20,-</p>
-        </section>
-        <section>
-            <h1 id="contact">Kontaktoplysninger</h1>
-            <p>Svendborgvej 83<br>5853 Ørbæk<br>Danmark</p>
-        </section>
-    </div>
-    <footer style="width: 100%;">
+<div id="overlay-menu" class="overlay">
+    <a href="#" class="closebtn" id="closebtn">&times;</a>
+    <menu class="overlay-content">
+        <li><a href="#opening-hours">Åbningstider</a></li>
+        <li><a href="#contact">Kontaktoplysninger</a></li>
+    </menu>
+</div>
+<nav id="logo" class="flex-display">
+    <div class="grid-container">
         <div>
-            <a href="https://www.facebook.com/loppeladenSvindinge">
-                <img src="assets/f_logo_RGB-White_58.png" alt="" style="padding: 1rem;">
-            </a>
+            <img  src="assets/loppeladen_cropped.jpg" alt="Loppeladen logo" style="max-width: 100%; height: auto; padding: 1em; min-width: 300px;">
         </div>
-    </footer>
+        <div id="nav-col-0" class="flex-display">
+            <b id="nav-links-container">
+                <a class="nav-links" href="#opening-hours">Åbningstider</a>
+                <a class="nav-links" href="#contact">Kontaktoplysninger</a>
+            </b>
+            <div class="menu-container flex-display" id="menu-container">
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div>
+    <section class="img-container">
+        <img src="assets/boger.jpg" alt="">
+        <img src="assets/porcelæn.jpg" alt="">
+        <img src="assets/spil.jpg" alt="">
+    </section>
+    <section>
+        <h1 id="opening-hours">Åbningstider</h1>
+        <p class="text-size-normal">Loppeladen holder åbent på nedenstående datoer i tidsrummet 18:00-20:00</p>
+        <ul id="opening-dates-list">
+        </ul>
+        <p>Indgang kr. 20,-</p>
+    </section>
+    <section>
+        <h1 id="contact">Kontaktoplysninger</h1>
+        <p>Svendborgvej 83<br>5853 Ørbæk<br>Danmark</p>
+    </section>
+</div>
+<footer style="width: 100%;">
+    <div>
+        <a href="https://www.facebook.com/loppeladenSvindinge">
+            <img src="assets/f_logo_RGB-White_58.png" alt="" style="padding: 1rem;">
+        </a>
+    </div>
+</footer>
+<script type="module" src="script.js"></script>
 </body>
 
 </html>

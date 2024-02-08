@@ -1,106 +1,46 @@
-window.onload = (event) => {
+document.addEventListener('DOMContentLoaded', function () {
+    const menuContainer = document.getElementById("menu-container");
+    const overlayMenu = document.getElementById("overlay-menu");
+    const closeBtn = document.getElementById("closebtn");
+
+    menuContainer.addEventListener("click", function () {
+        overlayMenu.style.width = "20em";
+    });
+
+    closeBtn.addEventListener("click", function () {
+        overlayMenu.style.width = "0";
+    });
+
     renderOpeningDates();
-}
-
-function openNav() {
-    document.getElementById("overlay-menu").style.width = "20em";
-}
-
-function closeNav() {
-    document.getElementById("overlay-menu").style.width = "0";
-}
+});
 
 const openingTimes = [
-    {
-        date: new Date("15 Aug 2023")
-    },
-    {
-        date: new Date("02 October 2023")
-    },
-    {
-        date: new Date("07 November 2023")
-    },
-    {
-        date: new Date("06 December 2023")
-    },
-    {
-        date: new Date("06 March 2024")
-    },
-    {
-        date: new Date("22 April 2024")
-    },
-    {
-        date: new Date("04 June 2024")
-    },
-    {
-        date: new Date("03 July 2024")
-    },
-    {
-        date: new Date("12 August 2024")
-    },
-    {
-        date: new Date("01 October 2024")
-    },
-    {
-        date: new Date("04 December 2024")
-    }
+    "15 Aug 2023",
+    "02 Oct 2023",
+    "07 Nov 2023",
+    "06 Dec 2023",
+    "06 Mar 2024",
+    "22 Apr 2024",
+    "04 Jun 2024",
+    "03 Jul 2024",
+    "12 Aug 2024",
+    "01 Oct 2024",
+    "04 Dec 2024"
 ];
 
-function renderOpeningDates() {
+export function renderOpeningDates() {
     const today = new Date();
     const openingDatesList = document.querySelector("#opening-dates-list");
-    openingTimes.forEach((item) => {
-        if (today <= item.date) {
-            const formattedDate = formatDate(item.date);
-            const dayOfWeek = getDayOfWeek(item.date.getDay());
+
+    openingTimes.forEach(dateString => {
+        const date = new Date(dateString);
+        if (today <= date) {
+            const formattedDate = date.toLocaleDateString("da-DK", { day: "numeric", month: "long", year: "numeric" });
+            const dayOfWeek = date.toLocaleDateString("da-DK", { weekday: "long" });
+
             const listItem = document.createElement("li");
-            const listItemNode = document.createTextNode(dayOfWeek + " " + formattedDate);
-            listItem.appendChild(listItemNode);
+            listItem.textContent = `${dayOfWeek} ${formattedDate}`;
             openingDatesList.appendChild(listItem);
         }
     });
-    
-}
-
-function formatDate(date) {
-    const day = date.getDate();
-    const month = date.getMonth();
-    const year = date.getFullYear();
-    const formattedMonth = getMonthName(month)
-
-    return `${day}. ${formattedMonth} ${year}`
-}
-
-function getDayOfWeek(date) {
-    const days = [
-        "Søndag",
-        "Mandag",
-        "Tirsdag",
-        "Onsdag",
-        "Torsdag",
-        "Fredag",
-        "Lørdag"
-    ]
-    
-    return days[date];
-}
-
-export function getMonthName(monthIndex) {
-    
-    const months = [
-        "januar",
-        "februar",
-        "marts",
-        "april",
-        "maj",
-        "juni",
-        "juli",
-        "august",
-        "september",
-        "oktober",
-        "november",
-        "december"
-    ]
-
-    return months[monthIndex];
 }
